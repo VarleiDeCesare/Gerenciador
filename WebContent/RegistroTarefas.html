@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="RegistroTarefas.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <div id="form-main">
+        <div id="form-div">
+          <h2 class="d-flex justify-content-center" id="titulo"><a href="http://localhost:8080/TarefasDiarias/ListaTarefas.jsp">Ver Minha Lista de Atividade</a></h2>
+          <h2 class="d-flex justify-content-center" id="titulo">Informe os dados da Tarefa</h2>
+          <form action="/Projeto/rest/tarefas/create" method="GET" class="form" id="form1">
+            
+            <p class="name">
+              <input name="tarefa" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Nome Tarefa" id="tarefa" />
+            </p>
+            
+           <!--  <p class="email">
+              <input name="data" type="date" class="validate[required,custom[email]] feedback-input" id="data" placeholder="Data" />
+            </p>
+            
+            <p class="text">
+              <textarea name="descricao" class="validate[required,length[6,300]] feedback-input" id="descricao" placeholder="Descrição"></textarea>
+            </p>
+             -->
+            
+            <div class="submit">
+              <input type="submit" value="Enviar" id="button-blue"/>
+              <div class="ease"></div>
+            </div>
+          </form>
+        </div>
+</body>
+</html>

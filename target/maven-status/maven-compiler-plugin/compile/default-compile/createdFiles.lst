@@ -1,0 +1,4 @@
+br\edu\imed\model\Usuario.class
+br\edu\imed\restjersey\CelsiusParaFahreneitService.class
+br\edu\imed\model\Produto.class
+br\edu\imed\test\TesteJPA.class
