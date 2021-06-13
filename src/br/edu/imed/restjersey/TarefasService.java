@@ -44,7 +44,6 @@ public class TarefasService {
             tarefas = tq.getResultList();
 
             transaction.commit();
-
         } catch (Exception e) {
         	
             e.printStackTrace();
@@ -52,23 +51,14 @@ public class TarefasService {
         finally {
             em.close();
         }
+        
         assertNotNull(t);
-       
         JSONObject JsonO = new JSONObject();
         JsonO.put("tarefas",tarefas);
-		
-        //login, cadastrar tarefa, editar tarefas e deletar tarefa
-        
-        
 		String resultado = JsonO.toString();
-        
-		return Response.status(200).entity(resultado).build();
-		
-    }
-		
+		return Response.status(200).entity(resultado).build();	
+    }		
 }
-		
-		
 		
 		
 		

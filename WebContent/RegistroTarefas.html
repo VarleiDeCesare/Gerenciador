@@ -7,33 +7,87 @@
     <title>Registro</title>
     <link rel="stylesheet" href="RegistroTarefas.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+		html{
+			background-color: gray;
+		}
+		body{
+    		font-family: 'Roboto Condensed', sans-serif;
+    	}
+    	
+		#titulo{
+			margin: 15px 0;
+		}
+		
+		form#form1 {
+		    display: flex;
+		    justify-content: center;
+		    flex-direction: column;
+		}
+		
+		.lista{
+			color: white;
+		    margin-top: 23px;
+		    font-size: 22px;
+		    background: gray;
+		    padding: 7px;
+		    border-radius: 30px;
+		}
+		.lista:hover{
+		color: #fff;
+	    text-decoration: none;
+	    background-color: gray;
+    	}
+    	.enviar:hover {
+	    color: white;
+	    text-decoration: none;
+	    background-color: gray;
+		}
+		
+		.enviar{
+		    background-color: gray;
+		    outline: none;
+		    border: none;
+		    color: white;
+		    font-weight: 600;
+		    font-size: 23px;
+		    border-radius: 37px;
+		}
+		.abc {
+		    padding: 6px;
+		    background-color: gray;
+		    border: none;
+		    border-radius: 35px;
+		}
+		.abc:hover{
+			background-color: gray;
+		}
+		.abc::placeholder{
+			color: #fff;
+		}
 
+	</style>
 </head>
 <body>
     <div id="form-main">
         <div id="form-div">
-          <h2 class="d-flex justify-content-center" id="titulo"><a href="http://localhost:8080/TarefasDiarias/ListaTarefas.jsp">Ver Minha Lista de Atividade</a></h2>
+          <h1 class="d-flex justify-content-center" id="titulo">Crie uma nova Tarefa</h1>
           <h2 class="d-flex justify-content-center" id="titulo">Informe os dados da Tarefa</h2>
-          <form action="/Projeto/rest/tarefas/create" method="GET" class="form" id="form1">
-            
-            <p class="name">
-              <input name="tarefa" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Nome Tarefa" id="tarefa" />
-            </p>
-            
-           <!--  <p class="email">
-              <input name="data" type="date" class="validate[required,custom[email]] feedback-input" id="data" placeholder="Data" />
-            </p>
-            
-            <p class="text">
-              <textarea name="descricao" class="validate[required,length[6,300]] feedback-input" id="descricao" placeholder="Descrição"></textarea>
-            </p>
-             -->
-            
-            <div class="submit">
-              <input type="submit" value="Enviar" id="button-blue"/>
-              <div class="ease"></div>
-            </div>
+          <form action="http://localhost:8080/Projeto/rest/criar" method="POST" class="form" id="form1">
+            <input placeholder="Nome" class="text-center abc" name="nome">
+            <br/>
+            <input class="text-center abc" name="descricao" placeholder="Descrição">
+            <br/>
+            <input class="text-center abc" name="data" placeholder="Data">
+            <br/>
+            <input class="text-center enviar" type="submit" value="Enviar" />
           </form>
+          <h6 class="d-flex justify-content-center"><a class="lista" href="http://localhost:8080/Projeto/tarefas.html">Lista de Atividade</a></h6>
         </div>
 </body>
 </html>
+
+
+
+
+
